@@ -1,0 +1,40 @@
+package 코테문제;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.nio.Buffer;
+import java.util.Scanner;
+
+public class BJ_18108태국기준년도구하기 {
+    public static void main(String[] args) throws IOException {
+        /*
+        [문제] 1998년생인 내가 태국에서는 2541년생 ?!
+        태국 공항 스크린에 올해가 2562년이라고 적혀 있다. 불교 국가인 태국은 석가모니가 열반한 해를 기준으로 연도를 세고, 우리나라는 서기를 기준으로 센다.
+        불기 연도가 주어질 때, 서기 연도로 바꿔주는 프로그램을 작성
+        [입력]
+        서기 연도를 알아보고 싶은 불기 연도 y가 주어진다 (1000<= y <=3000)
+        [출력]
+        불기 연도를 서기 연도로 변환한 결과를 출력
+         */
+
+        // 2541-1998 = 서기와 불기의 차이는 543년, 불기가 주어졌을 때 543을 뺀 값이 서기.
+
+        // 1. Scanner 사용
+//        Scanner sc = new Scanner(System.in);
+//
+//        int year = sc.nextInt();
+//
+//        System.out.println(year - 543);
+
+        // 2. BufferedReader : 한 줄 단위로 읽은 뒤 문자열로 반환 해주기 때문에 숫자는 정수로 변환해주는 작업 필요
+
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+        String s = br.readLine();  // 한줄을 읽고 문자열로 반환함
+        int year = Integer.parseInt(s);  // 반환된 문자열을 정수로 바꿔줌 
+
+        System.out.println(year - 543);
+
+    }
+}
