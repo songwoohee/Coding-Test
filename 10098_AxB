@@ -1,0 +1,35 @@
+package 코테문제;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.Scanner;
+import java.util.StringTokenizer;
+
+public class BJ_10998곱하기 {
+    public static void main(String[] args) throws IOException {
+         /*
+        [문제] A와 B를 입력 받은 다음, AxB를 출력 하는 프로그램을 작성 하세요
+        [입력] 첫째 줄에 A와 B가 주어진다(0<A, B<10)
+        [출력] 첫째 줄에 AxB를 출력한다.
+       */
+
+        // 1번
+//        Scanner sc = new Scanner(System.in);
+//        int a = sc.nextInt();
+//        int b = sc.nextInt();
+//        System.out.println(a*b);
+
+        // 2번 BufferedReader, StringTokenizer 이용
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+        String str = br.readLine();
+        StringTokenizer st = new StringTokenizer(str," ");
+        int a = Integer.parseInt(st.nextToken());
+        int b = Integer.parseInt(st.nextToken());  //st.nextToken() : 문자열을 반환하니 Integer.parseInt 로 int형을 반환 해준다
+
+        System.out.println(a*b);
+
+
+    }
+}
