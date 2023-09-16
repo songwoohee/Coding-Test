@@ -1,0 +1,45 @@
+package 코테문제;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.Scanner;
+import java.util.StringTokenizer;
+
+public class BJ_1008나누기 {
+    public static void main(String[] args) throws IOException {
+        /*
+        [문제] A와 B를 입력 받은 다음, A/B를 출력 하는 프로그램을 작성 하세요
+        [입력] 첫째 줄에 A와 B가 주어진다(0<A, B<10)
+        [출력] 첫째 줄에 A/B를 출력 한다.
+       */
+
+        // 1번
+//        Scanner sc = new Scanner(System.in);
+//        double a = sc.nextDouble();
+//        double b = sc.nextDouble();  // 오차범위를 벗어나지 않기 위해 반드시 double형으로 출력해주어야 한다.
+//        System.out.println(a/b);
+
+        // 2번 BufferedRader, readLine / StringTokenizer 클래스
+
+//        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+//
+//        String str = br.readLine();
+//        StringTokenizer st = new StringTokenizer(str," ");
+//        double a = Double.parseDouble(st.nextToken());
+//        double b = Double.parseDouble(st.nextToken());
+//
+//        System.out.println(a/b);
+
+        // 3번 br.readLine()을 통해 읽어온 것을 split("") 하여 공백 단위로 나눠준 뒤 string 배열에 각각 저장
+
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+        String[] str = br.readLine().split(" ");
+        double a = Double.parseDouble(str[0]);
+        double b = Double.parseDouble(str[1]);
+
+        System.out.println(a/b);
+
+    }
+}
